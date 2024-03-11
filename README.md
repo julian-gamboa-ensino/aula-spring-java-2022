@@ -6,6 +6,16 @@
  - Configuração de uma GATEWAY para acessar o serviço criado (**AWS Lambda**)
  - 
 
+## Conceitos básicos:
+
+
++ Método TDD
++ 
+
+
++ Micro serviços
+
+
 ## Passos iniciais: 
 
 Primeiramente vamos criar uma imagem Docker para o nosso serviço. Na pasta 
