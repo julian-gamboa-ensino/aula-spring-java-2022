@@ -1,0 +1,39 @@
+# Arquivos compilados
+*.java
+*.class
+*.jar
+*.war
+*.ear
+
+# Diretórios de saída
+target/
+out/
+build/
+
+# Arquivos temporários
+*.log
+*.tmp
+*.temp
+
+# Arquivos específicos do IDE
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+# Arquivos específicos do Maven
+*.lastUpdated
+release.properties
+
+# Arquivos específicos do Gradle
+.gradle/
+build/
+
+# Outras ferramentas
+*.factorypath
+*.cproject
+*.launch
+.DS_Store
+Thumbs.db
