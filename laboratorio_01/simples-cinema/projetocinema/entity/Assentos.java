@@ -3,14 +3,14 @@ package entity;
 
 public class Assentos {
 
-    private char[][] assentos;
+    private Assento[][] assentos;
 
     //Usar una matriz (array bidimensional) para representar los asientos.
     public Assentos(int filas, int colunas) {
-        assentos = new char[filas][colunas];
+        assentos = new Assento[filas][colunas];
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < colunas; j++) {
-                assentos[i][j] = 'l'; // Inicializa todos os assentos como livres
+                assentos[i][j] = new Assento(false); // Inicializa com assentos livres
             }
         }
     }
@@ -19,7 +19,7 @@ public class Assentos {
         int total = 0;
         for (int i = 0; i < assentos.length; i++) {
             for (int j = 0; j < assentos[i].length; j++) {
-                if (assentos[i][j] == 'l') {
+                if (!assentos[i][j].ocupado()) {
                     total++;
                 }
             }
@@ -32,7 +32,7 @@ public class Assentos {
         int total = 0;
         for (int i = 0; i < assentos.length; i++) {
             for (int j = 0; j < assentos[i].length; j++) {
-                if (assentos[i][j] == 'x') {
+                if (assentos[i][j].ocupado()) {
                     total++;
                 }
             }
@@ -45,7 +45,7 @@ public class Assentos {
         int total = 0;
         for (int i = 0; i < assentos.length; i++) {
             for (int j = 0; j < assentos[i].length; j++) {
-                if (assentos[i][j] == 'x') {
+                if (assentos[i][j].ocupado()) {
                     total++;
                 }
             }
@@ -54,23 +54,23 @@ public class Assentos {
     }
 
     public boolean reservarAssento(int fila, int coluna) {
-        if (estaDentroDosLimites(fila, coluna) && assentos[fila][coluna] == 'l') {
-            assentos[fila][coluna] = 'x';
+        if (estaDentroDosLimites(fila, coluna) && !assentos[fila][coluna].ocupado()) {
+            assentos[fila][coluna] = new Assento(true);
             return true;
         }
         return false;
     }
 
     public boolean liberarAssento(int fila, int coluna) {
-        if (estaDentroDosLimites(fila, coluna) && assentos[fila][coluna] == 'x') {
-            assentos[fila][coluna] = 'l';
+        if (estaDentroDosLimites(fila, coluna) && assentos[fila][coluna].ocupado()) {
+            assentos[fila][coluna] = new Assento(false);;
             return true;
         }
         return false;
     }
 
     public boolean estaOcupado(int fila, int coluna) {
-        return estaDentroDosLimites(fila, coluna) && assentos[fila][coluna] == 'x';
+        return estaDentroDosLimites(fila, coluna) && assentos[fila][coluna].ocupado();
     }
 
     private boolean estaDentroDosLimites(int fila, int coluna) {

@@ -25,6 +25,8 @@ public class Vendedor {
             System.out.print("Digite o número de ingressos: ");
             
             int numIngressos = scanner.nextInt();
+            scanner.close();
+            
             if ((this.assentos.totalLivres() < numIngressos) || numIngressos==0) {
                 System.out.println("(QUANTIDADE não vendidvel)  não posso lhe vender essa quantidade de assentos");
             }
