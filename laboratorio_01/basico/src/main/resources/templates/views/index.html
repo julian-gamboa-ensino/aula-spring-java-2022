@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="/css/styles.css" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <!-- Header -->
+    <div th:replace="components/header :: header"></div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div th:replace="components/sidebar :: sidebar"></div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <h2>Bem-vindo ao meu site!</h2>
+                <p>Este é o conteúdo principal da página.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div th:replace="components/footer :: footer"></div>
+</body>
+</html>

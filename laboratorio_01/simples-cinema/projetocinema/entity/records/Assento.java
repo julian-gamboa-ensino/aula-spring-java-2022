@@ -1,4 +1,4 @@
-package entity;
+package entity.records;
 
 // Record Assento 
 public record Assento(boolean ocupado) {
