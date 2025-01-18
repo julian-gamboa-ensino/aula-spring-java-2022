@@ -1,4 +1,4 @@
-package laboratorio._1.jpa.models;
+package laboratorio._1.jpa.models.Ofertas;
 
 import jakarta.persistence.*;
 

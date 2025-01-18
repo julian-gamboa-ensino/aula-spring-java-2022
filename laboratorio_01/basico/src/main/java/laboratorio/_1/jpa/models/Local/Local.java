@@ -1,4 +1,4 @@
-package laboratorio._1.jpa.models;
+package laboratorio._1.jpa.models.Local;
 
 import jakarta.persistence.*;
 
@@ -22,7 +22,7 @@ public class Local {
     @Column(name = "longitude")
     private Double longitude;
 
-    @Column(name = "localGps", length = 1024) // Tamanho da coluna VARCHAR
+    @Column(name = "localgps", length = 1024)
     private String localGps;
 
     public String getId() {

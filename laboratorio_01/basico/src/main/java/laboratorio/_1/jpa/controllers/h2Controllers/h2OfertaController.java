@@ -1,9 +1,9 @@
-package laboratorio._1.jpa.controllers;
+package laboratorio._1.jpa.controllers.h2Controllers;
 
 import org.springframework.web.bind.annotation.*;
 
-import laboratorio._1.jpa.models.Oferta;
-import laboratorio._1.jpa.models.OfertaRepository;
+import laboratorio._1.jpa.models.Ofertas.Oferta;
+import laboratorio._1.jpa.models.Ofertas.OfertaRepository;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package laboratorio._1.jpa.controllers;
+package laboratorio._1.jpa.controllers.h2Controllers;
 
 import org.springframework.web.bind.annotation.*;
 
-import laboratorio._1.jpa.models.Local;
-import laboratorio._1.jpa.models.LocalRepository;
+import laboratorio._1.jpa.models.Local.Local;
+import laboratorio._1.jpa.models.Local.LocalRepository;
 
 import java.util.List;
 
@@ -24,8 +24,13 @@ public class h2LocalController {
 
     @GetMapping("/{id}")
     public Local buscarLocalPorId(@PathVariable String id) {
-        return localRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Local não encontrado"));
+        Local local = localRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("Local não encontrado"));
+
+        
+        //System.out.println("Objeto retornado do banco: " + local.getLocalGps());
+
+return local;
     }
 
     @PostMapping
