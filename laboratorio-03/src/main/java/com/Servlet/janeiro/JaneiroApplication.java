@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 
 @SpringBootApplication
 public class JaneiroApplication {
-
+    
     public static void main(String[] args) {
         SpringApplication.run(JaneiroApplication.class, args);
     }
